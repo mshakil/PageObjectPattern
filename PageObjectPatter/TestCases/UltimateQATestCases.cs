@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
-using OpenQA.Selenium;
-using AutomationLibrary.DataAccess;
-using AutomationLibrary.Utilities;
+﻿using NUnit.Framework;
 using PageObjectPattern.PageObjects;
 using System.Configuration;
 
 namespace PageObjectPattern.TestCases
 {
     [TestFixture]
-    public class UltimateQATestCases : MainCall
+    public class UltimateQaTestCases : MainCall
     {
         [Test]
         [Description("Demo Test Using Page Object Pattern")]
@@ -43,8 +35,8 @@ namespace PageObjectPattern.TestCases
 
             Assert.IsTrue(studentDashBoard.IsAt(), "The Student Was Not Able To Login");
 
-            var PageObjecPatternCoursePage = studentDashBoard.ClickViewCourse();
-            Assert.IsTrue(PageObjecPatternCoursePage.IsAt(), "View Course Page Not open successfully.");
+            var pageObjecPatternCoursePage = studentDashBoard.ClickViewCourse();
+            Assert.IsTrue(pageObjecPatternCoursePage.IsAt(), "View Course Page Not open successfully.");
         }
     }
 }
